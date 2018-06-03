@@ -48,11 +48,15 @@ app.use(function(req, res, next) {
 //   console.log('Example app listening on port 3000!')
 // });
 
-app.set('port', (process.env.PORT || 3000));
+// app.set('port', (process.env.PORT || 3000));
+//
+// //Start Server
+// app.listen(app.get('port'), function() {
+//   console.log('Node app is running on port', app.get('port'));
+// });
 
-//Start Server
-app.listen(app.get('port'), function() {
+
+app.listen(process.env.PORT || 3000, function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
 module.exports = app;
